@@ -32,9 +32,31 @@
   border-radius: 5%;   
   object-fit: cover;  
 }
-</Style>
-<body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="70">
 
+</Style>
+<script>
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const formData = new FormData(contactForm);
+
+    // Create a URLSearchParams object to construct the query string
+    const urlParams = new URLSearchParams(formData);
+
+    // Construct the email URL
+    const emailUrl = `mailto:natea2989@gmail.com?subject=${urlParams.get('subject')}&body=${urlParams.get('contact-name')}\n${urlParams.get('contact-phone')}\n${urlParams.get('contact-email')}\n${urlParams.get('contact-message')}`;
+
+    // Open the email client with the pre-filled data
+    window.location.href = emailUrl;
+});
+
+</script>
+
+
+<body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="70">
     <!-- Start Header -->
     <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
         <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
@@ -358,104 +380,106 @@
                 </div>
 
                 <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
-                    <!-- Start Single Portfolio 
+                    <!-- Start Single Portfolio -->
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
                         <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCenterr">
                             <div class="inner">
                                 <div class="thumbnail" style="overflow: auto; height: 200px;">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/portfolio/portfolio-01.jpg"  style="height:156px;" alt="Personal Portfolio Images">
+                                        <img src="assets/images/myport/admindashboard.png"  style="height:156px;" alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
                                     <div class="category-info">
                                         <div class="category-list">
-                                            <a href="javascript:void(0)">UI UX Design of Website</a>
+                                            <a href="javascript:void(0)">Admin Dashboard</a>
                                         </div>
                                         <div class="meta">
                                             <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
                                                 10</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">I Designed UI and UX Design of EasyBux Website portal <i class="feather-arrow-up-right"></i></a></h4>
+                                    <h4 class="title"><a href="javascript:void(0)">Admin Dashboard for Parking Management  <i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
 					
-                   End Single Portfolio -->
-                                        <!-- Start Single Portfolio 
+                    <!-- End Single Portfolio -->
+                                        <!-- Start Single Portfolio -->
                                         <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                                            <div class="rn-portfolio" data-toggle="modal" data-target="#ee">
+                                            <div class="rn-portfolio" data-toggle="modal" data-target="#slotgrid">
                                                 <div class="inner">
                                                     <div class="thumbnail" style="overflow: auto; height: 200px;">
                                                         <a href="javascript:void(0)">
-                                                            <img src="assets/images/portfolio/project-2.jpg"  style="height:156px;" alt="Personal Portfolio Images">
+                                                            <img src="assets/images/myport/slotgrid.png"  style="height:156px;" alt="Personal Portfolio Images">
                                                         </a>
                                                     </div>
                                                     <div class="content">
                                                         <div class="category-info">
                                                             <div class="category-list">
-                                                                <a href="javascript:void(0)">UI UX Design of Website</a>
-                                                            </div>
+                                                          <a href="javascript:void(0)">Parking Spaces</a> </div>
                                                             <div class="meta">
                                                                 <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
                                                                     5</span>
                                                             </div>
                                                         </div>
-                                                        <h4 class="title"><a href="javascript:void(0)">Design of Loan Landing Page <i class="feather-arrow-up-right"></i></a></h4>
-                                                    </div>
+                                                                  <h4 class="title">
+                                                   <a href="javascript:void(0)">Smart Parking Slots Visualization <i class="feather-arrow-up-right"></i></a>
+                                             </h4> </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    End Single Portfolio -->
+                                     <!--  End Single Portfolio -->
 
-                    <!-- Start Single Portfolio
+                    <!-- Start Single Portfolio-->
                     <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCente">
+                        <div class="rn-portfolio" data-toggle="modal" data-target="#slottable">
                             <div class="inner">
                                 <div class="thumbnail" style="overflow: auto; height: 200px;">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/portfolio/portfolio-02.jpg"  style="height:156px;"  alt="Personal Portfolio Images">
+                                        <img src="assets/images/myport/slottable.png"  style="height:156px;"  alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
                                     <div class="category-info">
                                         <div class="category-list">
-                                            <a href="javascript:void(0)">Portfolio Website</a>
+                                            <a href="javascript:void(0)">Parking Management</a>
                                         </div>
                                         <div class="meta">
                                             <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
                                                 8</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">Design of Portfolio Website <i class="feather-arrow-up-right"></i></a></h4>
+                                    <h4 class="title">
+                                        <a href="javascript:void(0)">Parking Slots Table & Management <i class="feather-arrow-up-right"></i></a>
+                                    </h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Portfolio -->
 
-                    <!-- Start Single Portfolio 
+                    <!-- Start Single Portfolio -->
                     <div data-aos="fade-up" data-aos-delay="500" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCent">
+                        <div class="rn-portfolio" data-toggle="modal" data-target="#reservation">
                             <div class="inner">
                                 <div class="thumbnail" style="overflow: auto; height: 200px;">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/portfolio/portfolio-03.jpg"  style="height:156px;"  alt="Personal Portfolio Images">
+                                        <img src="assets/images/myport/reservation.png"  style="height:156px;"  alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
                                     <div class="category-info">
                                         <div class="category-list">
-                                            <a href="javascript:void(0)">Landing Page</a>
+                                            <a href="javascript:void(0)">Space Reservation</a>
                                         </div>
                                         <div class="meta">
                                             <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
                                                 9</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">IT Company Portfolio
+                                    <h4 class="title"><a href="javascript:void(0)">Reserve available perking spaces
                                             <i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
@@ -463,84 +487,58 @@
                     </div>
                     <!-- End Single Portfolio -->
 
-                    <!-- Start Single Portfolio 
+                    <!-- Start Single Portfolio -->
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCen">
+                        <div class="rn-portfolio" data-toggle="modal" data-target="#invoice">
                             <div class="inner">
                                 <div class="thumbnail" style="overflow: auto; height: 200px;">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/portfolio/portfolio-04.jpg"  style="height:156px;"   alt="Personal Portfolio Images">
+                                        <img src="assets/images/myport/invoice.png"  style="height:156px;"   alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
                                     <div class="category-info">
                                         <div class="category-list">
-                                            <a href="javascript:void(0)">Figma</a>
+                                            <a href="javascript:void(0)">Payments</a>
                                         </div>
                                         <div class="meta">
                                             <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
                                                 360</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">Mobile app landing design &
-                                            Services<i class="feather-arrow-up-right"></i></a></h4>
+                                    <h4 class="title"><a href="javascript:void(0)">Payment Instructions Invoice <i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Portfolio -->
 
-                    <!-- Start Single Portfolio 
+                    <!-- Start Single Portfolio -->
                     <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCe">
+                        <div class="rn-portfolio" data-toggle="modal" data-target="#report">
                             <div class="inner">
                                 <div class="thumbnail" style="overflow: auto; height: 200px;">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/portfolio/portfolio-05.jpg"  style="height:156px;"  alt="Personal Portfolio Images">
+                                        <img src="assets/images/myport/report.png"  style="height:156px;"  alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
                                     <div class="category-info">
                                         <div class="category-list">
-                                            <a href="javascript:void(0)">Web Design</a>
+                                            <a href="javascript:void(0)">PMS Reports</a>
                                         </div>
                                         <div class="meta">
                                             <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
                                                 280</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">Design for tecnology & services<i class="feather-arrow-up-right"></i></a></h4>
+                                    <h4 class="title"><a href="javascript:void(0)">Generate Parkingg Reports<i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Portfolio -->
 
-                    <!-- Start Single Portfolio 
-                    <div data-aos="fade-up" data-aos-delay="500" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModal">
-                            <div class="inner">
-                                <div class="thumbnail" style="overflow: auto; height: 200px;">
-                                    <a href="javascript:void(0)">
-                                        <img src="assets/images/portfolio/portfolio-06.jpg" style="height:156px;" alt="Personal Portfolio Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="category-info">
-                                        <div class="category-list">
-                                            <a href="javascript:void(0)">Web Design</a>
-                                        </div>
-                                        <div class="meta">
-                                            <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                690</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="javascript:void(0)">App for tecnology & services<i class="feather-arrow-up-right"></i></a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Portfolio -->
                 </div>
             </div>
         </div>
@@ -1047,7 +1045,7 @@
                     </div>
 
                     <div class="col-lg-8 col-xl-7">
-                        <!-- Pricing Area 
+                         Pricing Area 
                         <div class="navigation-wrapper">
                             <ul class="nav " id="myTab" role="tablist">
                                 <li class="nav-item ">
@@ -1063,13 +1061,14 @@
                             </ul>
                             <div class="tab-content" id="myTabContent">
 
-                                <div class="tab-pane fade " id="test" role="tabpanel" aria-labelledby="test-tab">
-                                   
+
+                                <div class="tab-pane fade" id="test" role="tabpanel" aria-labelledby="test-tab">
+    
                                     <div class="rn-pricing">
                                         <div class="pricing-header">
                                             <div class="header-left">
-                                                <h2 class="title">Make Your Single Page</h2>
-                                                <span>Elementor</span>
+                                                <h2 class="title">Static Plan</h2>
+                                                <span>Basic Web Solution</span>
                                             </div>
                                             <div class="header-right">
                                                 <span>$30.00</span>
@@ -1077,270 +1076,128 @@
                                         </div>
                                         <div class="pricing-body">
                                             <p class="description">
-                                                All the Lorem Ipsum generators on the Internet tend to repeat predefined
-                                                chunks as necessary
+                                                Best for simple projects requiring a static, responsive, and optimized design.
                                             </p>
                                             <div class="check-wrapper">
                                                 <div class="left-area">
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>1 Page with Elementor</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Customization</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Responsive Design</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Content Upload</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Customization</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>2 Plugins/Extensions</p>
-                                                    </div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Single Page Website</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Basic UI/UX Design</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Responsive Layout</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>SEO-Friendly Structure</p></div>
                                                 </div>
                                                 <div class="right-area">
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>multipage Elementor</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Figma</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>MAintaine Design</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Content Upload</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design With XD</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>8 Plugins/Extensions</p>
-                                                    </div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Basic Content Upload</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>2 Plugin Integrations</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Email Support</p></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="pricing-footer">
-                                            <a href="#" class="rn-btn d-block">
-                                                <span>ORDER NOW</span>
-                                                <i data-feather="arrow-right"></i>
-                                            </a>
+                                            <a href="#" class="rn-btn d-block"><span>ORDER NOW</span><i data-feather="arrow-right"></i></a>
                                             <div class="time-line">
-                                                <div class="single-cmt d-flex">
-                                                    <i data-feather="clock"></i>
-                                                    <span>2 Days Delivery</span>
-                                                </div>
-                                                <div class="single-cmt d-flex">
-                                                    <i data-feather="activity"></i>
-                                                    <span>Unlimited Revission</span>
-                                                </div>
+                                                <div class="single-cmt d-flex"><i data-feather="clock"></i><span>2 Days Delivery</span></div>
+                                                <div class="single-cmt d-flex"><i data-feather="activity"></i><span>Unlimited Revisions</span></div>
                                             </div>
                                         </div>
                                     </div>
-                                  
+                                
                                 </div>
+                                
 
                                 <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                               
+    
                                     <div class="rn-pricing">
                                         <div class="pricing-header">
                                             <div class="header-left">
-                                                <h2 class="title">Design Make this Page</h2>
-                                                <span>Elementor</span>
+                                                <h2 class="title">Standard Plan</h2>
+                                                <span>Advanced Web Solution</span>
                                             </div>
                                             <div class="header-right">
-                                                <span>$50.00</span>
+                                                <span>$80.00</span>
                                             </div>
                                         </div>
                                         <div class="pricing-body">
                                             <p class="description">
-                                                Making this the first true generator on the Internet. It uses a
-                                                dictionary & plugin Development.
+                                                Perfect for businesses needing a multi-page website with interactive features and customization.
                                             </p>
                                             <div class="check-wrapper">
                                                 <div class="left-area">
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>1 Page with Elementor</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Customization</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Responsive Design</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Content Upload</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Customization</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>2 Plugins/Extensions</p>
-                                                    </div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Up to 5 Pages</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Custom UI/UX Design</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Fully Responsive</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>SEO Optimization</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Content Upload & Formatting</p></div>
                                                 </div>
                                                 <div class="right-area">
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>multipage Elementor</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Figma</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>MAintaine Design</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Content Upload</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design With XD</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>8 Plugins/Extensions</p>
-                                                    </div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Up to 5 Plugin Integrations</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Basic Animations</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Contact & Inquiry Forms</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Basic E-Commerce Features</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Email & Chat Support</p></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="pricing-footer">
-                                            <a href="#" class="rn-btn d-block">
-                                                <span>ORDER NOW</span>
-                                                <i data-feather="arrow-right"></i>
-                                            </a>
-                                            <div class="time-line d-flex">
-                                                <div class="single-cmt d-flex">
-                                                    <i data-feather="clock"></i>
-                                                    <span>2 Days Delivery</span>
-                                                </div>
-                                                <div class="single-cmt d-flex">
-                                                    <i data-feather="activity"></i>
-                                                    <span>Unlimited Revission</span>
-                                                </div>
+                                            <a href="#" class="rn-btn d-block"><span>ORDER NOW</span><i data-feather="arrow-right"></i></a>
+                                            <div class="time-line">
+                                                <div class="single-cmt d-flex"><i data-feather="clock"></i><span>5 Days Delivery</span></div>
+                                                <div class="single-cmt d-flex"><i data-feather="activity"></i><span>5 Revisions</span></div>
                                             </div>
                                         </div>
                                     </div>
-                                  
-                                </div>
-
-                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                 
+                                </div>
+                                
+                                
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    
                                     <div class="rn-pricing">
                                         <div class="pricing-header">
                                             <div class="header-left">
-                                                <h2 class="title">Customize Your Single Page</h2>
-                                                <span>Elementor</span>
+                                                <h2 class="title">Premium Plan</h2>
+                                                <span>Full-Scale Web Solution</span>
                                             </div>
                                             <div class="header-right">
-                                                <span>$90.00</span>
+                                                <span>$150.00</span>
                                             </div>
                                         </div>
                                         <div class="pricing-body">
                                             <p class="description">
-                                                I will install your desire theme and made like Theme demo and customize
-                                                your single page( homepage)
+                                                Best for businesses requiring a fully customized, high-performance website with advanced functionality.
                                             </p>
                                             <div class="check-wrapper">
                                                 <div class="left-area">
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>1 Page with Elementor</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Customization</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Responsive Design</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Content Upload</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Customization</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>2 Plugins/Extensions</p>
-                                                    </div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Unlimited Pages</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Fully Custom UI/UX Design</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>100% Responsive & Mobile Optimized</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>SEO & Speed Optimization</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Advanced Content Management</p></div>
                                                 </div>
                                                 <div class="right-area">
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>multipage Elementor</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design Figma</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>MAintaine Design</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Content Upload</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>Design With XD</p>
-                                                    </div>
-                                                    <div class="check d-flex">
-                                                        <i data-feather="check"></i>
-                                                        <p>8 Plugins/Extensions</p>
-                                                    </div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Unlimited Plugin Integrations</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Custom Animations & Effects</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Full E-Commerce Functionality</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Custom Web Applications</p></div>
+                                                    <div class="check d-flex"><i data-feather="check"></i><p>Priority Support & Maintenance</p></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="pricing-footer">
-                                            <a href="#" class="rn-btn d-block">
-                                                <span>ORDER NOW</span>
-                                                <i data-feather="arrow-right"></i>
-                                            </a>
-                                            <div class="time-line d-flex">
-                                                <div class="single-cmt d-flex">
-                                                    <i data-feather="clock"></i>
-                                                    <span>2 Days Delivery</span>
-                                                </div>
-                                                <div class="single-cmt d-flex">
-                                                    <i data-feather="activity"></i>
-                                                    <span>Unlimited Revission</span>
-                                                </div>
+                                            <a href="#" class="rn-btn d-block"><span>ORDER NOW</span><i data-feather="arrow-right"></i></a>
+                                            <div class="time-line">
+                                                <div class="single-cmt d-flex"><i data-feather="clock"></i><span>7-10 Days Delivery</span></div>
+                                                <div class="single-cmt d-flex"><i data-feather="activity"></i><span>Unlimited Revisions</span></div>
                                             </div>
                                         </div>
                                     </div>
-                                    
+                                
                                 </div>
+                                
+
+
                             </div>
                         </div>
-                        End -->
+             
                     </div>
                 </div>
             </div>
@@ -1457,7 +1314,7 @@
                             <div class="col-lg-6">
                                 <div class="portfolio-popup-thumbnail">
                                     <div class="image">
-                                        <img class="w-100" src="assets/images/portfolio/portfolio-01.jpg" alt="slide">
+                                        <img class="w-100" src="assets/images/myport/portfolio-01.jpg" alt="slide">
                                     </div>
                                 </div>
                             </div>
@@ -1473,7 +1330,7 @@
                                             <span>LIKE THIS</span>
                                             <i data-feather="thumbs-up"></i>
                                         </a>
-                                        <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
+                                        <a href="" class="rn-btn">
                                             <span>VIEW PROJECT</span>
                                             <i data-feather="chevron-right"></i>
                                         </a>
@@ -1505,23 +1362,22 @@
                     <div class="col-lg-6">
                         <div class="portfolio-popup-thumbnail">
                             <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/portfolio-01.jpg" alt="slide">
+                                <img src="assets/images/myport/admindashboard.png" alt="slide">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="text-content">
-                            <h3>
-                                <span>Featured - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
+               
+							 <h3><span>Admin Dashboard</span> Parking Management System</h3>
+                              <p class="mb--30">This dashboard provides an overview of the parking facility, system users, available parking spaces, and vehicle categories. Built with Angular and Spring Boot.</p>
                             <div class="button-group mt--20">
                                 <a href="#" class="rn-btn thumbs-icon">
                                     <span>LIKE THIS</span>
                                     <i data-feather="thumbs-up"></i>
                                 </a>
-                                <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
+                                <a href="" class="rn-btn">
                                     <span>VIEW PROJECT</span>
                                     <i data-feather="chevron-right"></i>
                                 </a>
@@ -1539,7 +1395,7 @@
 <!-- End Modal Portfolio area -->
         
         <!-- Modal Portfolio Body area Start -->
-   <div class="modal fade" id="ee" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal fade" id="slotgrid" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1553,23 +1409,21 @@
                     <div class="col-lg-6">
                         <div class="portfolio-popup-thumbnail">
                             <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/project-2.jpg" alt="slide">
+                                <img class="w-100" src="assets/images/myport/slotgrid.png" alt="slide">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="text-content">
-                            <h3>
-                                <span>Featured - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
-                            <div class="button-group mt--20">
+                         <h3><span>Parking Spaces View</span> Real-Time Slot Monitoring</h3>
+                            <p class="mb--30">A dynamic grid and smart view of parking slots, displaying available, reserved, and pending spaces. Developed with Angular and Spring Boot.</p>
+                           <div class="button-group mt--20">
                                 <a href="#" class="rn-btn thumbs-icon">
                                     <span>LIKE THIS</span>
                                     <i data-feather="thumbs-up"></i>
                                 </a>
-                                <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
+                                <a href="" class="rn-btn">
                                     <span>VIEW PROJECT</span>
                                     <i data-feather="chevron-right"></i>
                                 </a>
@@ -1588,7 +1442,7 @@
 
 
  <!-- Modal Portfolio Body area Start -->
- <div class="modal fade" id="exampleModalCente" tabindex="-1" role="dialog" aria-hidden="true">
+ <div class="modal fade" id="slottable" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1602,23 +1456,21 @@
                     <div class="col-lg-6">
                         <div class="portfolio-popup-thumbnail">
                             <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/portfolio-02.jpg" alt="slide">
+                                <img class="w-100" src="assets/images/myport/slottable.png" alt="slide">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="text-content">
-                            <h3>
-                                <span>Portfolio - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
+                            <h3><span>Parking Slots Management</span> Table & Detail View</h3>
+                            <p class="mb--30">A structured table view displaying parking slots with options to modify, delete, and reserve spaces. Built with Angular and Spring Boot.</p>
                             <div class="button-group mt--20">
                                 <a href="#" class="rn-btn thumbs-icon">
                                     <span>LIKE THIS</span>
                                     <i data-feather="thumbs-up"></i>
                                 </a>
-                                <a href="https://inamurrehman420.github.io/portfolio/" class="rn-btn">
+                                <a href="" class="rn-btn">
                                     <span>VIEW PROJECT</span>
                                     <i data-feather="chevron-right"></i>
                                 </a>
@@ -1636,7 +1488,7 @@
 <!-- End Modal Portfolio area -->
 
  <!-- Modal Portfolio Body area Start -->
- <div class="modal fade" id="exampleModalCent" tabindex="-1" role="dialog" aria-hidden="true">
+ <div class="modal fade" id="reservation" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1650,26 +1502,24 @@
                     <div class="col-lg-6">
                         <div class="portfolio-popup-thumbnail">
                             <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/portfolio-03.jpg" alt="slide">
+                                <img class="w-100" src="assets/images/myport/reservation.png" alt="slide">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="text-content">
-                            <h3>
-                                <span>APP Market - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
-                            <div class="button-group mt--20">
+                            <h3><span>Reservation System</span> Add New Booking</h3>
+                            <p class="mb--30">This screen allows users to reserve a parking slot by selecting a start and end time. Built with Angular and Spring Boot.</p>
+                             <div class="button-group mt--20">
                                 <a href="#" class="rn-btn thumbs-icon">
                                     <span>LIKE THIS</span>
                                     <i data-feather="thumbs-up"></i>
                                 </a>
-                                <!-- <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
+                               <a href="" class="rn-btn">
                                     <span>VIEW PROJECT</span>
                                     <i data-feather="chevron-right"></i>
-                                </a> -->
+                                </a> 
                             </div>
 
                         </div>
@@ -1683,7 +1533,7 @@
 </div>
 <!-- End Modal Portfolio area -->
  <!-- Modal Portfolio Body area Start -->
- <div class="modal fade" id="exampleModalCen" tabindex="-1" role="dialog" aria-hidden="true">
+ <div class="modal fade" id="invoice" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1697,26 +1547,24 @@
                     <div class="col-lg-6">
                         <div class="portfolio-popup-thumbnail">
                             <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
+                                <img class="w-100" src="assets/images/myport/invoice.png" alt="slide">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="text-content">
-                            <h3>
-                                <span>APP - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
+                            <h3><span>Payment Invoice</span> Transaction & Instructions</h3>
+                            <p class="mb--30">Displays invoice details including payment amount, facility information, and customer details. Built with Angular and Spring Boot.</p>
                             <div class="button-group mt--20">
                                 <a href="#" class="rn-btn thumbs-icon">
                                     <span>LIKE THIS</span>
                                     <i data-feather="thumbs-up"></i>
                                 </a>
-                                <!-- <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
+                                <a href="" class="rn-btn">
                                     <span>VIEW PROJECT</span>
                                     <i data-feather="chevron-right"></i>
-                                </a> -->
+                                </a> 
                             </div>
 
                         </div>
@@ -1730,7 +1578,7 @@
 </div>
 <!-- End Modal Portfolio area -->
  <!-- Modal Portfolio Body area Start -->
- <div class="modal fade" id="exampleModalCe" tabindex="-1" role="dialog" aria-hidden="true">
+ <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1744,26 +1592,24 @@
                     <div class="col-lg-6">
                         <div class="portfolio-popup-thumbnail">
                             <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/portfolio-05.jpg" alt="slide">
+                                <img class="w-100" src="assets/images/myport/report.png" alt="slide">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="text-content">
-                            <h3>
-                                <span>Travek - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
-                            <div class="button-group mt--20">
+                            <h3><span>Parking Reports</span> Data & Revenue Analysis</h3>
+                            <p class="mb--30">A reporting tool that generates parking data and revenue summaries based on date range and facility. Developed using Angular and Spring Boot.</p>
+                           <div class="button-group mt--20">
                                 <a href="#" class="rn-btn thumbs-icon">
                                     <span>LIKE THIS</span>
                                     <i data-feather="thumbs-up"></i>
                                 </a>
-                                <!-- <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
+                                <a href="" class="rn-btn">
                                     <span>VIEW PROJECT</span>
                                     <i data-feather="chevron-right"></i>
-                                </a> -->
+                                </a> 
                             </div>
 
                         </div>
@@ -1795,7 +1641,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-popup-thumbnail">
                             <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/portfolio-06.jpg" alt="slide">
+                                <img class="w-100" src="assets/images/myport/portfolio-06.jpg" alt="slide">
                             </div>
                         </div>
                     </div>
@@ -1811,10 +1657,10 @@
                                     <span>LIKE THIS</span>
                                     <i data-feather="thumbs-up"></i>
                                 </a>
-                                <!-- <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
+                              <a href="" class="rn-btn">
                                     <span>VIEW PROJECT</span>
                                     <i data-feather="chevron-right"></i>
-                                </a> -->
+                                </a> 
                             </div>
 
                         </div>
@@ -1827,53 +1673,7 @@
     </div>
 </div>
 <!-- End Modal Portfolio area -->
- <!-- Modal Portfolio Body area Start -->
- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i data-feather="x"></i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
 
-                    <div class="col-lg-6">
-                        <div class="portfolio-popup-thumbnail">
-                            <div class="image">
-                                <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="text-content">
-                            <h3>
-                                <span>Featured - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
-                            <div class="button-group mt--20">
-                                <a href="#" class="rn-btn thumbs-icon">
-                                    <span>LIKE THIS</span>
-                                    <i data-feather="thumbs-up"></i>
-                                </a>
-                                <a href="https://inamurrehman420.github.io/easybux/" class="rn-btn">
-                                    <span>VIEW PROJECT</span>
-                                    <i data-feather="chevron-right"></i>
-                                </a>
-                            </div>
-
-                        </div>
-                        <!-- End of .text-content -->
-                    </div>
-                </div>
-                <!-- End of .row Body-->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Modal Portfolio area -->
         <!-- Modal Blog Body area Start -->
         <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-news" role="document">
