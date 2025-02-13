@@ -34,26 +34,7 @@
 }
 
 </Style>
-<script>
-const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
-
-    // Get form data
-    const formData = new FormData(contactForm);
-
-    // Create a URLSearchParams object to construct the query string
-    const urlParams = new URLSearchParams(formData);
-
-    // Construct the email URL
-    const emailUrl = `mailto:natea2989@gmail.com?subject=${urlParams.get('subject')}&body=${urlParams.get('contact-name')}\n${urlParams.get('contact-phone')}\n${urlParams.get('contact-email')}\n${urlParams.get('contact-message')}`;
-
-    // Open the email client with the pre-filled data
-    window.location.href = emailUrl;
-});
-
-</script>
 
 
 <body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="70">
@@ -306,66 +287,7 @@ contactForm.addEventListener('submit', (event) => {
                     </div>
                     <!-- End SIngle Service -->
 
-                    <!-- Start Single Service -->
-                    <!-- <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="twitch"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Mobile App</a></h4>
-                                    <p class="description">There are many variations of passages of Lorem Ipsum
-                                        available, but the majority.
-                                    </p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div> -->
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <!-- <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="wifi"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">CEO Marketing</a></h4>
-                                    <p class="description">always free from repetition,
-                                        injected humour, or non-characteristic words etc.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div> -->
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <!-- <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="slack"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Personal Portfolio April</a></h4>
-                                    <p class="description"> It uses a dictionary of over 200 Latin words, combined with
-                                        a handful of model sentence.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div> -->
-                    <!-- End SIngle Service -->
-
-                </div>
-            </div>
-        </div>
-        <!-- End Service Area  -->
+                    
 
         <!-- Start Portfolio Area -->
         <div class="rn-portfolio-area rn-section-gap section-separator" id="portfolio">
@@ -382,7 +304,7 @@ contactForm.addEventListener('submit', (event) => {
                 <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
                     <!-- Start Single Portfolio -->
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-portfolio" data-toggle="modal" data-target="#exampleModalCenterr">
+                        <div class="rn-portfolio" data-toggle="modal" data-target="#dashboard">
                             <div class="inner">
                                 <div class="thumbnail" style="overflow: auto; height: 200px;">
                                     <a href="javascript:void(0)">
@@ -406,31 +328,31 @@ contactForm.addEventListener('submit', (event) => {
                     </div>
 					
                     <!-- End Single Portfolio -->
-                                        <!-- Start Single Portfolio -->
-                                        <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
-                                            <div class="rn-portfolio" data-toggle="modal" data-target="#slotgrid">
-                                                <div class="inner">
-                                                    <div class="thumbnail" style="overflow: auto; height: 200px;">
-                                                        <a href="javascript:void(0)">
-                                                            <img src="assets/images/myport/slotgrid.png"  style="height:156px;" alt="Personal Portfolio Images">
-                                                        </a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <div class="category-info">
-                                                            <div class="category-list">
-                                                          <a href="javascript:void(0)">Parking Spaces</a> </div>
-                                                            <div class="meta">
-                                                                <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                                    5</span>
-                                                            </div>
-                                                        </div>
-                                                                  <h4 class="title">
-                                                   <a href="javascript:void(0)">Smart Parking Slots Visualization <i class="feather-arrow-up-right"></i></a>
-                                             </h4> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                     <!--  End Single Portfolio -->
+                <!-- Start Single Portfolio -->
+                <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                    <div class="rn-portfolio" data-toggle="modal" data-target="#slotgrid">
+                        <div class="inner">
+                            <div class="thumbnail" style="overflow: auto; height: 200px;">
+                                <a href="javascript:void(0)">
+                                    <img src="assets/images/myport/slotgrid.png"  style="height:156px;" alt="Personal Portfolio Images">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="category-info">
+                                    <div class="category-list">
+                                <a href="javascript:void(0)">Parking Spaces</a> </div>
+                                    <div class="meta">
+                                        <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
+                                            5</span>
+                                    </div>
+                                </div>
+                                        <h4 class="title">
+                        <a href="javascript:void(0)">Smart Parking Slots Visualization <i class="feather-arrow-up-right"></i></a>
+                    </h4> </div>
+                        </div>
+                    </div>
+                </div>
+            <!--  End Single Portfolio -->
 
                     <!-- Start Single Portfolio-->
                     <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
@@ -1246,51 +1168,59 @@ contactForm.addEventListener('submit', (event) => {
                     <div data-aos-delay="600" class="col-lg-7 contact-input">
                         <div class="contact-form-wrapper">
                             <div class="introduce">
-
-                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" action="mail.php">
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="contact-name">Your Name</label>
-                                            <input class="form-control form-control-lg" name="contact-name" id="contact-name" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="contact-phone">Phone Number</label>
-                                            <input class="form-control" name="contact-phone" id="contact-phone" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="contact-email">Email</label>
-                                            <input class="form-control form-control-sm" id="contact-email" name="contact-email" type="email">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="subject">subject</label>
-                                            <input class="form-control form-control-sm" id="subject" name="subject" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="contact-message">Your Message</label>
-                                            <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12">
-                                        <button name="submit" type="submit" id="submit" class="rn-btn">
-                                            <span>SEND MESSAGE</span>
-                                            <i data-feather="arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </form>
+                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" 
+                                action="https://formsubmit.co/69c9dba7da46b4fcd112d220a6b5a366">
+                     
+            
+                              <!-- Prevents spam submissions -->
+                              <input type="hidden" name="_captcha" value="false"> 
+                          
+                              <!-- Sends a confirmation email to the sender -->
+                              <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I will get back to you soon.">
+                          
+                              <div class="col-lg-6">
+                                  <div class="form-group">
+                                      <label for="contact-name">Your Name</label>
+                                      <input class="form-control form-control-lg" name="name" id="contact-name" type="text" required>
+                                  </div>
+                              </div>
+                          
+                              <div class="col-lg-6">
+                                  <div class="form-group">
+                                      <label for="contact-phone">Phone Number</label>
+                                      <input class="form-control" name="phone" id="contact-phone" type="text">
+                                  </div>
+                              </div>
+                          
+                              <div class="col-lg-12">
+                                  <div class="form-group">
+                                      <label for="contact-email">Email</label>
+                                      <input class="form-control form-control-sm" id="contact-email" name="email" type="email" required>
+                                  </div>
+                              </div>
+                          
+                              <div class="col-lg-12">
+                                  <div class="form-group">
+                                      <label for="subject">Subject</label>
+                                      <input class="form-control form-control-sm" id="subject" name="subject" type="text">
+                                  </div>
+                              </div>
+                          
+                              <div class="col-lg-12">
+                                  <div class="form-group">
+                                      <label for="contact-message">Your Message</label>
+                                      <textarea name="message" id="contact-message" cols="30" rows="10" required></textarea>
+                                  </div>
+                              </div>
+                          
+                              <div class="col-lg-12">
+                                  <button name="submit" type="submit" id="submit" class="rn-btn">
+                                      <span>SEND MESSAGE</span>
+                                      <i data-feather="arrow-right"></i>
+                                  </button>
+                              </div>
+                          </form>
+                          
                             </div>
                         </div>
                     </div>
@@ -1299,56 +1229,10 @@ contactForm.addEventListener('submit', (event) => {
         </div>
         <!-- End Contuct section -->
 
-        <!-- Modal Portfolio Body area Start -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
 
-                            <div class="col-lg-6">
-                                <div class="portfolio-popup-thumbnail">
-                                    <div class="image">
-                                        <img class="w-100" src="assets/images/myport/portfolio-01.jpg" alt="slide">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="text-content">
-                                    <h3>
-                                        <span>Featured - Design</span> UI UX Design and development.
-                                    </h3>
-                                    <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
-                                    <div class="button-group mt--20">
-                                        <a href="#" class="rn-btn thumbs-icon">
-                                            <span>LIKE THIS</span>
-                                            <i data-feather="thumbs-up"></i>
-                                        </a>
-                                        <a href="" class="rn-btn">
-                                            <span>VIEW PROJECT</span>
-                                            <i data-feather="chevron-right"></i>
-                                        </a>
-                                    </div>
-
-                                </div>
-                                <!-- End of .text-content -->
-                            </div>
-                        </div>
-                        <!-- End of .row Body-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Modal Portfolio area -->
 
    <!-- Modal Portfolio Body area Start -->
-   <div class="modal fade" id="exampleModalCenterr" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal fade" id="dashboard" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1622,162 +1506,8 @@ contactForm.addEventListener('submit', (event) => {
     </div>
 </div>
 
-
-
-
-<!-- End Modal Portfolio area -->
- <!-- Modal Portfolio Body area Start -->
- <div class="modal fade" id="exampleModalC" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i data-feather="x"></i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-
-                    <div class="col-lg-6">
-                        <div class="portfolio-popup-thumbnail">
-                            <div class="image">
-                                <img class="w-100" src="assets/images/myport/portfolio-06.jpg" alt="slide">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="text-content">
-                            <h3>
-                                <span>Dashboard - Design</span> UI UX Design and development.
-                            </h3>
-                            <p class="mb--30">Designed website portal of Easybux using figma and for development used bootstrap 5 , JQuery and javascript</p>
-                            <div class="button-group mt--20">
-                                <a href="#" class="rn-btn thumbs-icon">
-                                    <span>LIKE THIS</span>
-                                    <i data-feather="thumbs-up"></i>
-                                </a>
-                              <a href="" class="rn-btn">
-                                    <span>VIEW PROJECT</span>
-                                    <i data-feather="chevron-right"></i>
-                                </a> 
-                            </div>
-
-                        </div>
-                        <!-- End of .text-content -->
-                    </div>
-                </div>
-                <!-- End of .row Body-->
-            </div>
-        </div>
-    </div>
-</div>
 <!-- End Modal Portfolio area -->
 
-        <!-- Modal Blog Body area Start -->
-        <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-
-                    <!-- End of .modal-header -->
-
-                    <div class="modal-body">
-                        <img src="assets/images/blog/blog-big-01.jpg" alt="news modal" class="img-fluid modal-feat-img">
-                        <div class="news-details">
-                            <span class="date">2 May, 2021</span>
-                            <h2 class="title">Digital Marketo to Their New Office.</h2>
-                            <p>Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
-                                facer
-                                possim assum.
-                                Typi non
-                                habent claritatem insitam; est usus legentis in iis qui facit eorum
-                                claritatem.
-                                Investigationes
-                                demonstraverunt
-                                lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
-                                dynamicus, qui
-                                sequitur
-                                mutationem consuetudium lectorum.</p>
-                            <h4>Nobis eleifend option conguenes.</h4>
-                            <p>Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed
-                                posuere
-                                massa nunc quis
-                                dui.
-                                Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa
-                                nisi.
-                                Curabitur sit
-                                amet
-                                suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc
-                                imperdiet risus
-                                leo,
-                                in rutrum erat dignissim id.</p>
-                            <p>Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis.
-                                Class aptent
-                                taciti sociosqu
-                                ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae
-                                nisi
-                                tortor. Morbi
-                                leo
-                                nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit
-                                bibendum. Morbi
-                                nec
-                                efficitur ex.</p>
-                            <h4>Mauris tempor, orci id pellentesque.</h4>
-                            <p>Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla
-                                dapibus dignissim.
-                                Pellentesque
-                                quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem
-                                rhoncus dolor, a
-                                facilisis
-                                neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa
-                                tristique.
-                                Nullam in
-                                aliquam
-                                diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed
-                                efficitur
-                                sollicitudin
-                                auctor.
-                                Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum
-                                et.</p>
-                        </div>
-
-                        <!-- Comment Section Area Start -->
-                        <div class="comment-inner">
-                            <h3 class="title mb--40 mt--50">Leave a Reply</h3>
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group"><input type="text" placeholder="Name">
-                                        </div>
-                                        <div class="rnform-group"><input type="email" placeholder="Email">
-                                        </div>
-                                        <div class="rnform-group"><input type="text" placeholder="Website">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group">
-                                            <textarea placeholder="Comment"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Comment Section End -->
-                    </div>
-                    <!-- End of .modal-body -->
-                </div>
-            </div>
-        </div>
-        <!-- End Modal Blog area -->
         <!-- Back to  top Start -->
         <div class="backto-top">
             <div>
@@ -1787,7 +1517,7 @@ contactForm.addEventListener('submit', (event) => {
         <!-- Back to top end -->
 
         <!-- Start Right Demo  -->
-        <!-- <div class="rn-right-demo">
+<!--         <div class="rn-right-demo">
             <button class="demo-button">
                 <span class="text">Demos</span>
             </button>
@@ -1826,7 +1556,7 @@ contactForm.addEventListener('submit', (event) => {
                                             <div class="inner">
                                                 <div class="thumbnail">
                                                     <a href="index.html">
-                                                        <img class="w-100" src="assets/images/demo/main-demo.png" alt="Personal Portfolio">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
@@ -1846,7 +1576,7 @@ contactForm.addEventListener('submit', (event) => {
                                             <div class="inner badge-2">
                                                 <div class="thumbnail">
                                                     <a href="index-technician.html">
-                                                        <img class="w-100" src="assets/images/demo/index-technician.png" alt="Personal Portfolio">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
@@ -1866,7 +1596,7 @@ contactForm.addEventListener('submit', (event) => {
                                             <div class="inner badge-2">
                                                 <div class="thumbnail">
                                                     <a href="index-model.html">
-                                                        <img class="w-100" src="assets/images/demo/home-model-v2.png" alt="Personal Portfolio">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png"alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
@@ -1886,7 +1616,7 @@ contactForm.addEventListener('submit', (event) => {
                                             <div class="inner badge-1">
                                                 <div class="thumbnail">
                                                     <a href="home-consulting.html">
-                                                        <img class="w-100" src="assets/images/demo/home-consulting.png" alt="Personal Portfolio">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
@@ -1906,7 +1636,7 @@ contactForm.addEventListener('submit', (event) => {
                                             <div class="inner badge-1">
                                                 <div class="thumbnail">
                                                     <a href="fashion-designer.html">
-                                                        <img class="w-100" src="assets/images/demo/fashion-designer.png" alt="Personal Portfolio">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
@@ -1926,7 +1656,7 @@ contactForm.addEventListener('submit', (event) => {
                                             <div class="inner">
                                                 <div class="thumbnail">
                                                     <a href="index-developer.html">
-                                                        <img class="w-100" src="assets/images/demo/developer.png" alt="Personal Portfolio">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png"alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
@@ -1940,182 +1670,7 @@ contactForm.addEventListener('submit', (event) => {
                                     </div>
                                     <!-- End Single Content  -->
 
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="instructor-fitness.html">
-                                                        <img class="w-100" src="assets/images/demo/instructor-fitness.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="instructor-fitness.html">Fitness Instructor</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner badge-1">
-                                                <div class="thumbnail">
-                                                    <a href="home-web-Developer.html">
-                                                        <img class="w-100" src="assets/images/demo/home-model.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-web-Developer.html">Web Developer</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-designer.html">
-                                                        <img class="w-100" src="assets/images/demo/home-video.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-designer.html">Designer</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-content-writer.html">
-                                                        <img class="w-100" src="assets/images/demo/text-rotet.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-content-writer.html">Content Writter</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-instructor.html">
-                                                        <img class="w-100" src="assets/images/demo/index-boxed.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-instructor.html">Instructor</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-freelancer.html">
-                                                        <img class="w-100" src="assets/images/demo/home-sticky.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-freelancer.html">Freelancer</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-photographer.html">
-                                                        <img class="w-100" src="assets/images/demo/index-bg-image.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-photographer.html">Photographer</a>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="index-politician.html">
-                                                        <img class="w-100" src="assets/images/demo/front-end.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="index-politician.html">Politician</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo coming-soon">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="#">
-                                                        <img class="w-100" src="assets/images/demo/coming-soon.png" alt="Personal Portfolio">
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="#">Accountant</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
+                                   
 
                                 </div>
                             </div>
@@ -2126,20 +1681,20 @@ contactForm.addEventListener('submit', (event) => {
                             <div class="content">
                                 <div class="row">
 
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
+                                      <!-- Start Single Content  -->
+                                      <div class="col-lg-4 col-md-6 col-12">
                                         <div class="single-demo">
                                             <div class="inner">
                                                 <div class="thumbnail">
-                                                    <a href="index-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/main-demo-white-version.png" alt="Personal Portfolio">
+                                                    <a href="index.html">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
                                                     </a>
                                                 </div>
                                                 <div class="inner">
-                                                    <h3 class="title"><a href="index-white-version.html">Main Demo</a></h3>
+                                                    <h3 class="title"><a href="index.html">Main Demo</a></h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -2151,15 +1706,15 @@ contactForm.addEventListener('submit', (event) => {
                                         <div class="single-demo">
                                             <div class="inner badge-2">
                                                 <div class="thumbnail">
-                                                    <a href="index-technician-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/index-technician-white-version.png" alt="Personal Portfolio">
+                                                    <a href="index-technician.html">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
                                                     </a>
                                                 </div>
                                                 <div class="inner">
-                                                    <h3 class="title"><a href="index-technician-white-version.html">Technician</a></h3>
+                                                    <h3 class="title"><a href="index-technician.html">Technician</a></h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -2171,15 +1726,15 @@ contactForm.addEventListener('submit', (event) => {
                                         <div class="single-demo">
                                             <div class="inner badge-2">
                                                 <div class="thumbnail">
-                                                    <a href="index-model-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/home-model-v2-white.png" alt="Personal Portfolio">
+                                                    <a href="index-model.html">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png"alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
                                                     </a>
                                                 </div>
                                                 <div class="inner">
-                                                    <h3 class="title"><a href="index-model-white-version.html">Model</a></h3>
+                                                    <h3 class="title"><a href="index-model.html">Model</a></h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -2191,16 +1746,15 @@ contactForm.addEventListener('submit', (event) => {
                                         <div class="single-demo">
                                             <div class="inner badge-1">
                                                 <div class="thumbnail">
-                                                    <a href="home-consulting-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/home-consulting-white-version.png" alt="Personal Portfolio">
+                                                    <a href="home-consulting.html">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
                                                     </a>
                                                 </div>
                                                 <div class="inner">
-                                                    <h3 class="title"><a href="home-consulting-white-version.html">Consulting</a>
-                                                    </h3>
+                                                    <h3 class="title"><a href="home-consulting.html">Consulting</a></h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -2212,16 +1766,15 @@ contactForm.addEventListener('submit', (event) => {
                                         <div class="single-demo">
                                             <div class="inner badge-1">
                                                 <div class="thumbnail">
-                                                    <a href="fashion-designer-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/fashion-designer-white-version.png" alt="Personal Portfolio">
+                                                    <a href="fashion-designer.html">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png" alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
                                                     </a>
                                                 </div>
                                                 <div class="inner">
-                                                    <h3 class="title"><a href="fashion-designer-white-version.html">Fashion Designer</a>
-                                                    </h3>
+                                                    <h3 class="title"><a href="fashion-designer.html">Fashion Designer</a></h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -2233,200 +1786,21 @@ contactForm.addEventListener('submit', (event) => {
                                         <div class="single-demo">
                                             <div class="inner">
                                                 <div class="thumbnail">
-                                                    <a href="index-developer-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/developer-white-version.png" alt="Personal Portfolio">
+                                                    <a href="index-developer.html">
+                                                        <img class="w-100" src="assets/images/myport/admindashboard.png"alt="Personal Portfolio">
                                                         <span class="overlay-content">
                                                     <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
                                                         </span>
                                                     </a>
                                                 </div>
                                                 <div class="inner">
-                                                    <h3 class="title"><a href="index-developer-white-version.html">Developer</a>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="instructor-fitness-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/instructor-fitness-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="instructor-fitness-white-version.html">Fitness Instructor</a>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner badge-1">
-                                                <div class="thumbnail">
-                                                    <a href="home-web-developer-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/home-model-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-web-developer-white-version.html">Web Developer</a>
-                                                    </h3>
+                                                    <h3 class="title"><a href="index-developer.html">Developer</a></h3>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- End Single Content  -->
 
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-designer-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/home-video-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-designer-white-version.html">Designer</a>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-content-writer-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/text-rotet-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-content-writer-white-version.html">Content
-                                                            Writter</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-instructor-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/index-boxed-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-instructor-white-version.html">Instructor</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-freelancer-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/home-sticky-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-freelancer-white-version.html">Freelancer</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="home-photographer-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/index-bg-image-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="home-photographer-white-version.html">Photographer</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="index-politician-white-version.html">
-                                                        <img class="w-100" src="assets/images/demo/front-end-white-version.png" alt="Personal Portfolio">
-                                                        <span class="overlay-content">
-                                                    <span class="overlay-text">View Demo <i class="feather-external-link"></i></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="index-politician-white-version.html">Politician</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
-
-                                    <!-- Start Single Content  -->
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-demo coming-soon">
-                                            <div class="inner">
-                                                <div class="thumbnail">
-                                                    <a href="#">
-                                                        <img class="w-100" src="assets/images/demo/coming-soon.png" alt="Personal Portfolio">
-                                                    </a>
-                                                </div>
-                                                <div class="inner">
-                                                    <h3 class="title"><a href="#">Accountant</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Content  -->
 
                                 </div>
                             </div>
