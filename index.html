@@ -1170,8 +1170,7 @@
                             <div class="introduce">
                                 <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" 
                                 action="https://formsubmit.co/69c9dba7da46b4fcd112d220a6b5a366">
-                     
-            
+                              
                               <!-- Prevents spam submissions -->
                               <input type="hidden" name="_captcha" value="false"> 
                           
@@ -1219,7 +1218,53 @@
                                       <i data-feather="arrow-right"></i>
                                   </button>
                               </div>
+                          
+                              <!-- Success & Error Message Container -->
+                              <div id="form-message" style="margin-top: 15px;"></div>
                           </form>
+                          
+                          <script>
+                          document.getElementById("contact-form").addEventListener("submit", async function(event) {
+                              event.preventDefault(); // Prevent default form submission
+                          
+                              const form = event.target;
+                              const formData = new FormData(form);
+                              const messageDiv = document.getElementById("form-message");
+                          
+                              // Show loading spinner
+                              messageDiv.innerHTML = '<p style="color: blue;">⏳ Sending your message...</p>';
+                          
+                              try {
+                                  const response = await fetch(form.action, {
+                                      method: "POST",
+                                      body: formData,
+                                  });
+                          
+                                  // Remove loading spinner
+                                  if (response.ok) {
+                                      messageDiv.innerHTML = `
+                                          <p style="color: green;">✅ Your message has been sent successfully!</p>
+                                          <button onclick="dismissMessage()" style="margin-top: 10px; padding: 5px 10px; background-color: #f44336; color: white; border: none; cursor: pointer;">
+                                              Dismiss
+                                          </button>
+                                      `;
+                                      form.reset(); // Clear form fields
+                                  } else {
+                                      messageDiv.innerHTML = '<p style="color: red;">❌ Error sending message. Please try again.</p>';
+                                  }
+                              } catch (error) {
+                                  messageDiv.innerHTML = '<p style="color: red;">❌ Something went wrong. Please check your connection.</p>';
+                              }
+                          });
+                          
+                          // Function to dismiss the success message
+                          function dismissMessage() {
+                              const messageDiv = document.getElementById("form-message");
+                              messageDiv.innerHTML = ''; // Clear the message container
+                          }
+                          </script>
+                          
+                          
                           
                             </div>
                         </div>

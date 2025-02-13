@@ -53,7 +53,7 @@
                 $('.demo-modal-area').removeClass('open');
             })
         },
-
+/* 
         contactForm: function () {
             $('.rwt-dynamic-form').on('submit', function (e) {
 				e.preventDefault();
@@ -86,7 +86,7 @@
 					}
 				});
 			});
-        },
+        }, */
 
         
         
