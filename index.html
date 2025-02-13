@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -1168,6 +1168,7 @@
                     <div data-aos-delay="600" class="col-lg-7 contact-input">
                         <div class="contact-form-wrapper">
                             <div class="introduce">
+               
                                 <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" 
                                 action="https://formsubmit.co/69c9dba7da46b4fcd112d220a6b5a366">
                               
@@ -1231,8 +1232,13 @@
                               const formData = new FormData(form);
                               const messageDiv = document.getElementById("form-message");
                           
-                              // Show loading spinner
-                              messageDiv.innerHTML = '<p style="color: blue;">⏳ Sending your message...</p>';
+                              // Show loading spinner and message with green color
+                              messageDiv.innerHTML = `
+                                  <div class="col-lg-12" style="display: flex; justify-content: center; align-items: center; color: green;">
+                                      <div class="spinner" style="border-top-color: green;"></div>
+                                      <span style="margin-left: 10px;">⏳ Sending your message...</span>
+                                  </div>
+                              `;
                           
                               try {
                                   const response = await fetch(form.action, {
@@ -1243,17 +1249,19 @@
                                   // Remove loading spinner
                                   if (response.ok) {
                                       messageDiv.innerHTML = `
-                                          <p style="color: green;">✅ Your message has been sent successfully!</p>
-                                          <button onclick="dismissMessage()" style="margin-top: 10px; padding: 5px 10px; background-color: #f44336; color: white; border: none; cursor: pointer;">
-                                              Dismiss
-                                          </button>
+                                          <div style="text-align: center;">
+                                              <p style="color: green;">✅ Your message has been sent successfully!</p>
+                                              <button onclick="dismissMessage()" style="margin-top: 10px; padding: 5px 10px; background-color: #C60A45; color: white; border: none; cursor: pointer;">
+                                                  Dismiss
+                                              </button>
+                                          </div>
                                       `;
                                       form.reset(); // Clear form fields
                                   } else {
-                                      messageDiv.innerHTML = '<p style="color: red;">❌ Error sending message. Please try again.</p>';
+                                      messageDiv.innerHTML = '<p style="color: red; text-align: center;">❌ Error sending message. Please try again.</p>';
                                   }
                               } catch (error) {
-                                  messageDiv.innerHTML = '<p style="color: red;">❌ Something went wrong. Please check your connection.</p>';
+                                  messageDiv.innerHTML = '<p style="color: red; text-align: center;">❌ Something went wrong. Please check your connection.</p>';
                               }
                           });
                           
@@ -1264,7 +1272,47 @@
                           }
                           </script>
                           
+                          <!-- Spinner CSS for a more attractive look -->
+                          <style>
+                          .spinner {
+                              border: 4px solid #f3f3f3;
+                              border-radius: 50%;
+                              border-top: 4px solid green;
+                              width: 24px;
+                              height: 24px;
+                              animation: spin 1s linear infinite;
+                          }
                           
+                          @keyframes spin {
+                              0% { transform: rotate(0deg); }
+                              100% { transform: rotate(360deg); }
+                          }
+                          
+                          #form-message {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 15px;
+                          }
+                          
+                          button {
+                              cursor: pointer;
+                          }
+                          
+                          @media (max-width: 768px) {
+                              .spinner {
+                                  width: 20px;
+                                  height: 20px;
+                              }
+                          
+                              button {
+                                  padding: 5px 8px;
+                                  font-size: 12px;
+                              }
+                          }
+                          </style>
+                          
+         
                           
                             </div>
                         </div>
