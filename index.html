@@ -20,23 +20,233 @@
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<Style>
+<style>
 .circle-image {
   width: 50px;   
   height: 50px; 
-  border:none;  
+  border: none;  
   border-radius: 50%;   
-  object-fit: cover;  
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.circle-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
 }
 .main-image {
-  border-radius: 5%;   
-  object-fit: cover;  
+  border-radius: 10px;   
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: var(--shadow-1);
+}
+.main-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 210, 255, 0.3);
 }
 
-</Style>
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#home .container {
+  position: relative;
+  z-index: 1;
+}
 
+/* Light Mode Overrides */
+body.light-mode {
+  --background-color-1: linear-gradient(145deg, #ecf0f3, #ffffff);
+  --background-color-2: #ecf0f3;
+  --shadow-1: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+  --shadow-2: inset 5px 5px 15px #d1d9e6, inset -5px -5px 15px #ffffff;
+  --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.1) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.5) inset;
+  --color-heading: #1e2125;
+  --color-body: #3c3e41;
+  --color-tertiary: #ffffff;
+  --color-gray: #1e2125;
+  background-color: var(--background-color-2);
+  color: var(--color-body);
+}
 
+body.light-mode .rn-header,
+body.light-mode .rn-header.header--sticky {
+  background-color: rgba(236, 240, 243, 0.85);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
+body.light-mode .popup-mobile-menu .inner {
+  background-color: var(--background-color-2);
+}
+
+body.light-mode .rn-portfolio .inner,
+body.light-mode .rn-service .inner,
+body.light-mode .resume-single-list .inner {
+  background: var(--background-color-1);
+}
+
+body.light-mode .rn-portfolio .inner:hover,
+body.light-mode .rn-service .inner:hover,
+body.light-mode .resume-single-list .inner:hover {
+  background: linear-gradient(145deg, #ffffff, #ecf0f3);
+}
+
+body.light-mode .rn-service::before,
+body.light-mode .rn-portfolio::before,
+body.light-mode .resume-single-list::before,
+body.light-mode .rn-portfolio .inner::before,
+body.light-mode .resume-single-list .inner::before,
+body.light-mode .rn-service .inner::before {
+  display: none !important;
+}
+
+body.light-mode .social-share a,
+body.light-mode .read-more-button {
+  background: var(--background-color-1);
+  box-shadow: var(--shadow-1);
+}
+
+body.light-mode .social-share a:hover,
+body.light-mode .read-more-button:hover {
+  background: var(--color-primary);
+  color: #ffffff !important;
+}
+
+body.light-mode .social-share a:hover i,
+body.light-mode .read-more-button:hover i {
+  color: #ffffff !important;
+}
+
+body.light-mode .nav-link {
+  color: var(--color-body) !important;
+}
+
+#theme-toggle {
+  background: var(--background-color-1);
+  box-shadow: var(--shadow-1);
+  color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+#theme-toggle:hover {
+  transform: translateY(-3px);
+}
+body.light-mode p,
+body.light-mode .description,
+body.light-mode span,
+body.light-mode .subtitle,
+body.light-mode ul.liststyle li,
+body.light-mode ol li {
+  color: var(--color-body) !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode .title,
+body.light-mode .maintitle,
+body.light-mode .category-list a,
+body.light-mode h1.title span {
+  color: var(--color-heading) !important;
+}
+
+body.light-mode .cd-headline.clip .cd-words-wrapper b {
+  color: var(--color-primary) !important;
+}
+
+body.light-mode .icon img,
+body.light-mode img[src*="backend.png"],
+body.light-mode img[src*="frontend.png"],
+body.light-mode img[src*="integration.png"] {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(87%) saturate(2254%) hue-rotate(156deg) brightness(101%) contrast(106%);
+}
+body.light-mode .contact-about-area,
+body.light-mode .contact-form-wrapper {
+  background: var(--background-color-1) !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 10px;
+}
+
+body.light-mode .rn-contact-area .form-group label {
+  color: var(--color-heading) !important;
+}
+
+body.light-mode .form-control,
+body.light-mode textarea {
+  background: var(--background-color-2) !important;
+  color: var(--color-body) !important;
+  border: 2px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: var(--inner-shadow) !important;
+}
+
+body.light-mode .form-control:focus,
+body.light-mode textarea:focus {
+  background: var(--background-color-1) !important;
+  box-shadow: var(--shadow-1) !important;
+  border-color: var(--color-primary) !important;
+}
+
+body.light-mode .rn-btn {
+  background: var(--background-color-1) !important;
+  color: var(--color-primary) !important;
+  box-shadow: var(--shadow-1) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.light-mode .rn-btn:hover {
+  background: var(--color-primary) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+body.light-mode .rn-btn:hover i {
+  color: #ffffff !important;
+}
+
+body.light-mode .rn-btn::before {
+  display: none !important;
+}
+
+/* Fix Resume Date and Hover Effect in Light Mode */
+body.light-mode .date-of-time span,
+body.light-mode .resume-single-list .inner .date-of-time span {
+  background: var(--background-color-1) !important;
+  color: var(--color-primary) !important;
+  box-shadow: var(--shadow-1) !important;
+}
+
+body.light-mode .resume-single-list:hover,
+body.light-mode .resume-single-list:hover .inner {
+  background: var(--background-color-1) !important;
+}
+
+body.light-mode .resume-single-list:hover .inner .date-of-time span {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+body.light-mode .resume-single-list:hover .heading .title h4,
+body.light-mode .resume-single-list:hover .heading .title h5 {
+  color: var(--color-heading) !important;
+}
+
+body.light-mode .resume-single-list:hover p.description,
+body.light-mode .resume-single-list .inner:hover p.description {
+  color: var(--color-body) !important;
+}
+
+body.light-mode .social-area .name,
+body.light-mode .contact-about-area .title-area h4 {
+  color: var(--color-heading) !important;
+}
+</style>
 <body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="70">
     <!-- Start Header -->
     <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
@@ -70,6 +280,9 @@
                     </nav>
                     <!-- Start Header Right  -->
                     <div class="header-right">
+                        <button id="theme-toggle" style="padding: 0 10px; border-radius: 50%; height: 40px; width: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i data-feather="sun" id="theme-icon"></i>
+                        </button>
                         <!-- <a class="rn-btn" target="_blank" href="../../checkout/83025947/create_account.html?license=regular"><span>BUY NOW</span></a> -->
                         <div class="hamberger-menu d-block d-xl-none">
                             <i id="menuBtn" class="feather-menu humberger-menu"></i>
@@ -120,7 +333,7 @@
                                 </svg></a>
                         </li>
                   
-                        <li class="linkedin"><a href="https://www.linkedin.com/in/natnael-teklu/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                        <li class="linkedin"><a href="https://www.linkedin.com/in/natnaelteklu-ntg/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                                     <rect x="2" y="9" width="4" height="12"></rect>
                                     <circle cx="4" cy="4" r="2"></circle>
@@ -141,6 +354,7 @@
 
         <!-- Start Slider Area -->
         <div id="home" class="rn-slider-area">
+            <div id="particles-js"></div>
             <div class="slide slider-style-1">
                 <div class="container">
                     <div class="row row--30 align-items-center">
@@ -152,11 +366,11 @@
                                         <span class="header-caption" id="page-top">
                                             <!-- type headline start-->
                                             <span class="cd-headline clip is-full-width">
-                                                <span>a </span>
+                                                <span>an </span>
                                         <!-- ROTATING TEXT -->
                                         <span class="cd-words-wrapper">
                                                     <b class="is-visible">API Integration Developer.</b>
-                                                    <b class="is-hidden">Experianced Coder.</b>
+                                                    <b class="is-hidden">Experienced Coder.</b>
                                                     <b class="is-hidden">Fullstack Developer.</b>
                                                 </span>
                                         </span>
@@ -183,7 +397,7 @@
                                                 <li class="facebook"><a href="https://www.facebook.com/natnael29/"><i data-feather="facebook"></i></a>
                                                 </li>
                                 
-                                                <li class="linkedin"><a href="https://www.linkedin.com/in/natnael-teklu/"><i data-feather="linkedin"></i></a>
+                                                <li class="linkedin"><a href="https://www.linkedin.com/in/natnaelteklu-ntg/"><i data-feather="linkedin"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -278,6 +492,7 @@
 							enabling features like payment gateways, social media sharing, and data analytics. 
 							My approach ensures smooth functionality and enhances application capabilities while
 							maintaining a seamless user experience.
+                                    </p>
 
                     <a class="read-more-button" href="#"><i class="feather-arrow-right-circle"></i></a>
                                 </div>
@@ -286,17 +501,17 @@
                         </div>
                     </div>
                     <!-- End SIngle Service -->
-
-                    
-
+                </div>
+            </div>
+        </div>
         <!-- Start Portfolio Area -->
         <div class="rn-portfolio-area rn-section-gap section-separator" id="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
-                            <span class="subtitle">Visit my portfolio and keep your feedback</span>
-                            <h2 class="title">My Portfolio</h2>
+                            <span class="subtitle">Check out my recent projects and feel free to share your feedback.</span>
+                            <h2 class="title">Recent Work</h2>
                         </div>
                     </div>
                 </div>
@@ -481,14 +696,13 @@
                     <div class="col-lg-12">
                         <ul class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="true">education & training</a>
+                                <a class="nav-link active" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="true">Education & Training</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="professional-tab" data-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">professional
-                                    Skills</a>
+                                <a class="nav-link" id="professional-tab" data-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">Professional Skills</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">experience</a>
+                                <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
                             </li>
                             <!-- <li class="nav-item">
                                 <a class="nav-link" id="interview-tab" data-toggle="tab" href="#interview" role="tab" aria-controls="interview" aria-selected="false">interview</a>
@@ -500,164 +714,168 @@
                             <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel" aria-labelledby="education-tab">
                                 <div class="personal-experience-inner mt--40">
                                     <div class="row">
-                                        <!-- Start Skill List Area  -->
+                                        <!-- Degrees Column -->
                                         <div class="col-lg-6 col-md-12 col-12">
                                             <div class="content">
-                                                <span class="subtitle">2017 - 2024</span>
-                                                <h4 class="maintitle">Education & Training Quality</h4>
+                                                <span class="subtitle">2017 - Present</span>
+                                                <h4 class="maintitle">Academic Degrees</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
+                                                    <!-- MSc Card -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Bechalour of Computer Science BSC</h4>
-                                                                    <span>Dilla University (2017 - 2021)</span>
-																<br>
-																	   <span Style="color:green">Graduated</span>
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/aau.png" alt="AAU Logo" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:16px;">Master of Science in Computer Science</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Software Engineering &mdash; Addis Ababa University</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-left:58px;">
+                                                                        <span style="color:#61dafb; font-size:13px;">2023 &ndash; 2026 &nbsp;&bull;&nbsp; <span style="color:green;">Graduated</span></span>
+                                                                        <p class="description" style="margin-top:6px;">Specialized in software engineering principles, advanced algorithms, distributed systems, and research methodologies. Completed thesis research in scalable software design and system architecture.</p>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.81/4</span>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4> WSO2</h4>
-                                                                    <span>Digital Transformation Technology (2023 - 2024)</span>
-                                                                   <br>
-																   <span Style="color:green">Certified</span>
-																</div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.50/4</span>
-                                                                </div>
+                                                                <div class="date-of-time"><span>MSc</span></div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
-													                                                    <!-- Start Single List  -->
+                                                    <!-- End MSc Card -->
+
+                                                    <!-- BSc Card -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>DevOps</h4>
-                                                                    <span>Koenig Solutions (2024 - 2024)</span>
-                                                                   <br>
-																   <span Style="color:green">Certified</span>
-																</div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.85/4</span>
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/du.png" alt="Dilla University Logo" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:16px;">Bachelor of Science in Computer Science</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Dilla University</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-left:58px;">
+                                                                        <span style="color:#61dafb; font-size:13px;">2017 &ndash; 2021 &nbsp;&bull;&nbsp; <span style="color:green;">Graduated</span></span>
+                                                                        <p class="description" style="margin-top:6px;">Completed a comprehensive program covering software development, data structures, algorithms, databases, and networking with a strong academic record of 3.81 GPA.</p>
+                                                                    </div>
                                                                 </div>
+                                                                <div class="date-of-time"><span>BSc</span></div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
+                                                    <!-- End BSc Card -->
 
-                                                    
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
+                                        <!-- End Degrees Column -->
 
-                                        <!-- Start Skill List Area 2nd  -->
+                                        <!-- Certifications Column -->
                                         <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
                                             <div class="content">
-                                                <span class="subtitle">2016 - 2021</span>
-                                                <h4 class="maintitle">Job Experience</h4>
+                                                <span class="subtitle">2022 - 2024</span>
+                                                <h4 class="maintitle">Certifications</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
+                                                    <!-- WSO2 -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Experianced 
-																	Third-Party API Developer</h4>
-                                                                    <span>Hibret Bank (2022 - Present)</span>
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/wso2_logo.png" alt="WSO2 Logo" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:15px;">WSO2 &mdash; Digital Transformation</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Koenig Solutions &nbsp;&bull;&nbsp; 2023 &ndash; 2024</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-left:58px;">
+                                                                        <span style="color:green; font-size:13px;">&#10003; Certified</span>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.90/4</span>
-                                                                </div>
+                                                                <div class="date-of-time"><span>WSO2</span></div>
                                                             </div>
-                                                            <p class="description">
-															Integrate external services to enhance application functionality. 
-															This includes researching and selecting suitable APIs, implementing API calls,
-															and ensuring seamless data flow while managing error 
-															handling and data transformation. Maintain comprehensive documentation, monitor performance,
-															and implement security best practices to protect user data. By leveraging third-party APIs,
-															Enrich applications with features like payment processing and social media sharing, improving overall user experience.
-															
-															</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
+                                                    <!-- DevOps -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Experianced Front-End Developer</h4>
-                                                                     <span>Hibret Bank (2022 - Present)</span>
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/koenig_solutions_logo.png" alt="Koenig Solutions Logo" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:15px;">DevOps Engineering</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Koenig Solutions &nbsp;&bull;&nbsp; 2024</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-left:58px;">
+                                                                        <span style="color:green; font-size:13px;">&#10003; Certified</span>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>4/4</span>
-                                                                </div>
+                                                                <div class="date-of-time"><span>DevOps</span></div>
                                                             </div>
-                                                            <p class="description">
-														As a Front-End Developer, I create responsive and interactive user interfaces using HTML, 
-														CSS, JavaScript, TypeScript, React Native, and Angular. My focus is on crafting visually 
-														appealing designs that provide an intuitive user experience across all devices.
-														I implement best practices for performance optimization and accessibility, ensuring that applications are fast,
-														reliable, and user-friendly. I collaborate closely with designers and stakeholders to transform wireframes and prototypes into functional applications,
-														always prioritizing usability and aesthetic quality.
-															</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
+                                                    <!-- CCNA -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Experianced Back-End Developer</h4>
-                                                                    <span>Hibret Bank (2022 - Present)</span>
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/cisco_logo.png" alt="Cisco Logo" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:15px;">Cisco Certified Network Associate Routing and Switching (CCNA)</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Cisco &nbsp;&bull;&nbsp; May 2018</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-left:58px;">
+                                                                        <span style="color:green; font-size:13px;">&#10003; Certified</span>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.8/4</span>
-                                                                </div>
+                                                                <div class="date-of-time"><span>CCNA</span></div>
                                                             </div>
-                                                            <p class="description">
-															In my role as a Back-End Developer, I build robust and scalable server-side applications using Spring Boot.
-															I develop RESTful APIs, manage databases, and implement server-side logic to facilitate seamless communication between the front-end and back-end.
-															My responsibilities include ensuring data security, optimizing application performance, and maintaining code quality through best practices. 
-															I focus on writing clean, maintainable code while integrating third-party services,
-															ensuring that the back-end supports the functionality and performance required by the application.
-															</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
+
+                                                    <!-- IT Essentials -->
+                                                    <div class="resume-single-list">
+                                                        <div class="inner">
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/du.png" alt="Dilla University" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:15px;">IT Essentials Training</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Dilla University &nbsp;&bull;&nbsp; May 2018</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="margin-left:58px;">
+                                                                        <span style="color:green; font-size:13px;">&#10003; Certified</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="date-of-time"><span>IT Cert</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
+                                        <!-- End Certifications Column -->
+
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Single Tab  -->
+
+
 
                             <!-- Start Single Tab  -->
-                            <div class="tab-pane fade " id="professional" role="tabpanel" aria-labelledby="professional-tab">
+                            <div class="tab-pane fade single-tab-area" id="professional" role="tabpanel" aria-labelledby="professional-tab">
                                 <div class="personal-experience-inner mt--40">
                                     <div class="row row--40">
 
@@ -780,164 +998,96 @@
 
 
                             <!-- Start Single Tab  -->
-                            <div class="tab-pane show active fade single-tab-area" id="experience" role="tabpanel" aria-labelledby="education-tab">
+                            <div class="tab-pane fade single-tab-area" id="experience" role="tabpanel" aria-labelledby="experience-tab">
                                 <div class="personal-experience-inner mt--40">
                                     <div class="row">
-                                        <!-- Start Skill List Area  -->
-                                        <div class="col-lg-6 col-md-12 col-12">
+                                        <div class="col-lg-12 col-md-12 col-12">
                                             <div class="content">
-                                                <span class="subtitle">2017 - 2024</span>
-                                                <h4 class="maintitle">Education & Training Quality</h4>
+                                                <span class="subtitle">2021 - Present</span>
+                                                <h4 class="maintitle">Professional Experience</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
+                                                    <!-- Hibret Bank Card -->
+                                                    <div class="resume-single-list" style="margin-bottom:30px;">
                                                         <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Bechalour of Computer Science BSC</h4>
-                                                                    <span>Dilla University (2017 - 2021)</span>
-																<br>
-																	   <span Style="color:green">Graduated</span>
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <!-- Company Header -->
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/hibret.png" alt="Hibret Bank Logo" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:17px;">Hibret Bank S.C.</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Full-time &nbsp;&bull;&nbsp; 3+ yrs &nbsp;&bull;&nbsp; Addis Ababa, Ethiopia &middot; On-site</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Role 1 -->
+                                                                    <div style="border-left:2px solid #0e6ba8; margin-left:22px; padding-left:16px; margin-top:10px;">
+                                                                        <h5 style="margin:0 0 2px; font-size:15px;">Associate Interface &amp; Program Development Officer</h5>
+                                                                        <span style="font-size:12px; color:#61dafb;">Mar 2024 &ndash; Present &nbsp;&bull;&nbsp; 1+ yr</span>
+                                                                        <p class="description" style="margin-top:6px;">Lead the design and development of full-stack banking applications and internal systems. Architect RESTful APIs, oversee third-party API integrations (payment gateways, CBS), and mentor junior developers in code quality and delivery standards.</p>
+                                                                        <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:6px;">
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">Full-Stack Development</span>
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">API Integration</span>
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">Spring Boot</span>
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">Angular</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Role 2 -->
+                                                                    <div style="border-left:2px solid #0e6ba8; margin-left:22px; padding-left:16px; margin-top:14px;">
+                                                                        <h5 style="margin:0 0 2px; font-size:15px;">Junior Interface &amp; Program Development Officer</h5>
+                                                                        <span style="font-size:12px; color:#61dafb;">Aug 2022 &ndash; Mar 2024 &nbsp;&bull;&nbsp; 1 yr 8 mos</span>
+                                                                        <p class="description" style="margin-top:6px;">Built and maintained internal banking portals and integrated external financial APIs. Developed responsive UIs using Angular and TypeScript, while contributing to back-end services powered by Spring Boot and MySQL.</p>
+                                                                        <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:6px;">
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">Web Technologies</span>
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">TypeScript</span>
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">RESTful APIs</span>
+                                                                            <span style="background:rgba(14,107,168,0.15); color:#61dafb; border:1px solid rgba(97,218,251,0.2); border-radius:20px; padding:3px 10px; font-size:11px;">MySQL</span>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.81/4</span>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4> WSO2</h4>
-                                                                    <span>Digital Transformation Technology (2023 - 2024)</span>
-                                                                   <br>
-																   <span Style="color:green">Certified</span>
-																</div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.50/4</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-													                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>DevOps</h4>
-                                                                    <span>Koenig Solutions (2024 - 2024)</span>
-                                                                   <br>
-																   <span Style="color:green">Certified</span>
-																</div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.85/4</span>
-                                                                </div>
+                                                                <div class="date-of-time"><span>3+ Yrs</span></div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
+                                                    <!-- End Hibret Bank Card -->
 
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Skill List Area  -->
-
-                                        <!-- Start Skill List Area 2nd  -->
-                                        <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                            <div class="content">
-                                                <span class="subtitle">2016 - 2021</span>
-                                                <h4 class="maintitle">Job Experience</h4>
-                                                <div class="experience-list">
-
-                                                    <!-- Start Single List  -->
+                                                    <!-- EIIDE Card -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Experianced 
-																	Third-Party API Developer</h4>
-                                                                    <span>Hibret Bank (2022 - Present)</span>
+                                                            <div class="heading" style="align-items:flex-start;">
+                                                                <div class="title" style="flex:1;">
+                                                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+                                                                        <img src="assets/images/logo/eiide.png" alt="EIIDE Logo" style="width:46px; height:46px; border-radius:8px; object-fit:contain; background:#fff; padding:3px; flex-shrink:0;">
+                                                                        <div>
+                                                                            <h4 style="margin:0; font-size:17px;">EIIDE</h4>
+                                                                            <span style="font-size:13px; opacity:0.75;">Full-time &nbsp;&bull;&nbsp; Addis Ababa, Ethiopia &middot; On-site</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div style="border-left:2px solid #555; margin-left:22px; padding-left:16px; margin-top:10px;">
+                                                                        <h5 style="margin:0 0 2px; font-size:15px;">Information Systems Officer</h5>
+                                                                        <span style="font-size:12px; color:#aaa;">Apr 2021 &ndash; Aug 2022 &nbsp;&bull;&nbsp; 1 yr 5 mos</span>
+                                                                        <p class="description" style="margin-top:6px;">Managed and maintained information systems, overseeing data collection, reporting, and system administration. Supported digital operations and helped improve internal workflow efficiency through technology.</p>
+                                                                        <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:6px;">
+                                                                            <span style="background:rgba(255,255,255,0.07); color:#aaa; border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:3px 10px; font-size:11px;">Information Systems</span>
+                                                                            <span style="background:rgba(255,255,255,0.07); color:#aaa; border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:3px 10px; font-size:11px;">System Administration</span>
+                                                                            <span style="background:rgba(255,255,255,0.07); color:#aaa; border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:3px 10px; font-size:11px;">Data Reporting</span>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.90/4</span>
-                                                                </div>
+                                                                <div class="date-of-time"><span>1.5 Yrs</span></div>
                                                             </div>
-                                                            <p class="description">
-															Integrate external services to enhance application functionality. 
-															This includes researching and selecting suitable APIs, implementing API calls,
-															and ensuring seamless data flow while managing error 
-															handling and data transformation. Maintain comprehensive documentation, monitor performance,
-															and implement security best practices to protect user data. By leveraging third-party APIs,
-															Enrich applications with features like payment processing and social media sharing, improving overall user experience.
-															
-															</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Experianced Front-End Developer</h4>
-                                                                     <span>Hibret Bank (2022 - Present)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>5/5</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">
-														As a Front-End Developer, I create responsive and interactive user interfaces using HTML, 
-														CSS, JavaScript, TypeScript, React Native, and Angular. My focus is on crafting visually 
-														appealing designs that provide an intuitive user experience across all devices.
-														I implement best practices for performance optimization and accessibility, ensuring that applications are fast,
-														reliable, and user-friendly. I collaborate closely with designers and stakeholders to transform wireframes and prototypes into functional applications,
-														always prioritizing usability and aesthetic quality.
-															</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
-
-                                                    <!-- Start Single List  -->
-                                                    <div class="resume-single-list">
-                                                        <div class="inner">
-                                                            <div class="heading">
-                                                                <div class="title">
-                                                                    <h4>Experianced Back-End Developer</h4>
-                                                                    <span>Hibret Bank (2022 - Present)</span>
-                                                                </div>
-                                                                <div class="date-of-time">
-                                                                    <span>3.8/4</span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="description">
-															In my role as a Back-End Developer, I build robust and scalable server-side applications using Spring Boot.
-															I develop RESTful APIs, manage databases, and implement server-side logic to facilitate seamless communication between the front-end and back-end.
-															My responsibilities include ensuring data security, optimizing application performance, and maintaining code quality through best practices. 
-															I focus on writing clean, maintainable code while integrating third-party services,
-															ensuring that the back-end supports the functionality and performance required by the application.
-															</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single List  -->
+                                                    <!-- End EIIDE Card -->
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
                                     </div>
                                 </div>
                             </div>
                             <!-- End Single Tab  -->
+
                             
                         </div>
                     </div>
@@ -1135,7 +1285,7 @@
                     <div class="col-lg-12">
                         <div class="section-title text-center">
                             <span class="subtitle">Contact</span>
-                            <h2 class="title">Contact With Me</h2>
+                            <h2 class="title">Let's Connect</h2>
                         </div>
                     </div>
                 </div>
@@ -1921,7 +2071,7 @@
                             </a>
                         </div>
 
-                        <p class="description mt--30">© September 2024. All rights reserved by <a target="_blank"></a></p>
+                        <p class="description mt--30 ">© May 2025. All rights reserved by <a target="_blank"></a></p>
                     </div>
                 </div>
             </div>
@@ -1941,6 +2091,54 @@
     <script src="assets/js/vendor/particles.js"></script>
     <!-- main JS -->
     <script src="assets/js/main.js"></script>
-</body>
+    <!-- particle js -->
+    <script src="assets/js/particles-app.js"></script>
+    
+    <!-- Theme Toggle JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const body = document.body;
 
+            // Check localStorage for theme
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                body.classList.add(currentTheme);
+                if (currentTheme === 'light-mode') {
+                    themeIcon.setAttribute('data-feather', 'moon');
+                }
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+                if (body.classList.contains('light-mode')) {
+                    localStorage.setItem('theme', 'light-mode');
+                    themeIcon.setAttribute('data-feather', 'moon');
+                } else {
+                    localStorage.setItem('theme', '');
+                    themeIcon.setAttribute('data-feather', 'sun');
+                }
+                
+                // Re-render feather icons
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                }
+                
+                // Update particles color slightly for contrast if desired
+                if(window.pJSDom && window.pJSDom.length > 0) {
+                    let pJS = window.pJSDom[0].pJS;
+                    if(body.classList.contains('light-mode')) {
+                        pJS.particles.color.value = '#00d2ff';
+                        pJS.particles.line_linked.color = '#3c3e41';
+                    } else {
+                        pJS.particles.color.value = '#00d2ff';
+                        pJS.particles.line_linked.color = '#ffffff';
+                    }
+                    pJS.fn.particlesRefresh();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
